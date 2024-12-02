@@ -1,0 +1,4 @@
+dependency_overrides:
+  quill_native_bridge: ^11.0.0
+  quill_native_bridge_web: ^0.0.1-dev.7
+  drift: ^2.19.2
