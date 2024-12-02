@@ -685,9 +685,11 @@ packages:
   quill_native_bridge:
     dependency: transitive
     description:
-      path: "../quill_native_bridge_mobile"
-      relative: true
-    source: path
+      path: quill_native_bridge_mobile
+      ref: HEAD
+      resolved-ref: f4f3226dbca5fbb478f4a07e7816675d86fca3f3
+      url: "https://github.com/pnm1133/flutter-quill/"
+    source: git
     version: "11.0.0"
   quill_native_bridge_android:
     dependency: transitive
@@ -1026,10 +1028,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "84ba388638ed7a8cb3445a320c8273136ab2631cd5f2c57888335504ddab1bc2"
+      sha256: "8b338d4486ab3fbc0ba0db9f9b4f5239b6697fcee427939a40e720cbb9ee0a69"
       url: "https://pub.dev"
     source: hosted
-    version: "5.8.0"
+    version: "5.9.0"
   xdg_directories:
     dependency: transitive
     description:
