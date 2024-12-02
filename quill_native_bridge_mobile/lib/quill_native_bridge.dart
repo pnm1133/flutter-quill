@@ -69,7 +69,7 @@ class QuillNativeBridge {
   /// if [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) is unsupported,
   /// not available or restricted (the case for Firefox and Safari). See [copy_event](https://developer.mozilla.org/en-US/docs/Web/API/Element/copy_event).
   @Category(['Clipboard'])
-  Future<void> copyHtmlToClipboard(String html) =>
+  static Future<void> copyHtmlToClipboard(String html) =>
       _platform.copyHtmlToClipboard(html);
 
   /// Copies an image to the system clipboard to be pasted on other apps.
@@ -116,7 +116,7 @@ class QuillNativeBridge {
   ///
   /// Calling this on unsupported platforms will throw [UnimplementedError].
   @Category(['Gallery'])
-  Future<void> openGalleryApp() => _platform.openGalleryApp();
+  static Future<void> openGalleryApp() => _platform.openGalleryApp();
 
   /// Saves an image to the gallery app on supported platforms.
   /// **Supports Android, iOS, and macOS**.
@@ -163,7 +163,7 @@ class QuillNativeBridge {
   ///
   /// See also [saveImage] to save the image on desktop and web platforms.
   @Category(['Gallery'])
-  Future<void> saveImageToGallery(
+  static Future<void> saveImageToGallery(
     Uint8List imageBytes, {
     required GalleryImageSaveOptions options,
   }) =>
@@ -203,7 +203,7 @@ class QuillNativeBridge {
   /// **which will be revoked before returning it**. Always `null` on non-web platforms.
   ///
   /// See also [saveImageToGallery] for platforms with a native gallery app.
-  Future<ImageSaveResult> saveImage(
+  static Future<ImageSaveResult> saveImage(
     Uint8List imageBytes, {
     required ImageSaveOptions options,
   }) =>
