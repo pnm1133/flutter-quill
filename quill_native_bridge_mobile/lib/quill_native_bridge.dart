@@ -44,13 +44,13 @@ class QuillNativeBridge {
   /// Always review the doc comment of a method before use for special notes.
   ///
   /// See also: [QuillNativeBridgeFeature]
-  Future<bool> isSupported(QuillNativeBridgeFeature feature) =>
+  static Future<bool> isSupported(QuillNativeBridgeFeature feature) =>
       _platform.isSupported(feature);
 
   /// Checks if the app runs on [iOS Simulator](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
   ///
   /// Should be called only on an iOS app.
-  Future<bool> isIOSSimulator() => _platform.isIOSSimulator();
+  static Future<bool> isIOSSimulator() => _platform.isIOSSimulator();
 
   /// Returns a HTML from the system clipboard. The HTML can be platform-dependent.
   ///
@@ -61,7 +61,7 @@ class QuillNativeBridge {
   /// Returns `null` if the HTML content is not available or if the user has not granted
   /// permission for pasting on iOS.
   @Category(['Clipboard'])
-  Future<String?> getClipboardHtml() => _platform.getClipboardHtml();
+  static Future<String?> getClipboardHtml() => _platform.getClipboardHtml();
 
   /// Copies an HTML to the system clipboard to be pasted on other apps.
   ///
@@ -83,7 +83,7 @@ class QuillNativeBridge {
   ///
   /// Currently, it's not supported on **Windows**.
   @Category(['Clipboard'])
-  Future<void> copyImageToClipboard(Uint8List imageBytes) =>
+  static Future<void> copyImageToClipboard(Uint8List imageBytes) =>
       _platform.copyImageToClipboard(imageBytes);
 
   /// Returns the copied image from the system clipboard.
@@ -94,20 +94,22 @@ class QuillNativeBridge {
   ///
   /// Currently, it's not supported on **Windows**.
   @Category(['Clipboard'])
-  Future<Uint8List?> getClipboardImage() => _platform.getClipboardImage();
+  static Future<Uint8List?> getClipboardImage() =>
+      _platform.getClipboardImage();
 
   /// Returns the copied GIF image from the system clipboard.
   ///
   /// **Supports Android and iOS only.**
   @Category(['Clipboard'])
-  Future<Uint8List?> getClipboardGif() => _platform.getClipboardGif();
+  static Future<Uint8List?> getClipboardGif() => _platform.getClipboardGif();
 
   /// Returns the file paths from the system clipboard.
   ///
   /// Supports **macOS** and **Linux**.
   /// **Windows** and the web are currently unsupported.
   @Category(['Clipboard'])
-  Future<List<String>> getClipboardFiles() => _platform.getClipboardFiles();
+  static Future<List<String>> getClipboardFiles() =>
+      _platform.getClipboardFiles();
 
   /// Opens the system gallery app.
   /// **Supports Android, iOS, Windows and macOS only.**
