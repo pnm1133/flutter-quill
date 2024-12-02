@@ -1,3 +1,0 @@
-dependency_overrides:
-  web: ^0.5.0
-  quill_native_bridge_web: any
